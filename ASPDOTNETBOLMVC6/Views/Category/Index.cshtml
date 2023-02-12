@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ASPDOTNETBOLMVC6.Models.Category>
+@{
+    ViewData["Title"] = "List of Categories";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.CategoryTitle)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
